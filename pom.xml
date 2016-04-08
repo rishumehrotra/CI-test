@@ -30,22 +30,6 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
-<!--			<plugin>
-				<groupId>com.amashchenko.maven.plugin</groupId>
-				<artifactId>gitflow-maven-plugin</artifactId>
-				<version>1.2.2</version>
-				<configuration>
-					<installProject>false</installProject>
-					<gitFlowConfig>
-						<productionBranch>master</productionBranch>
-						<developmentBranch>develop</developmentBranch>
-						<releaseBranchPrefix>release/</releaseBranchPrefix>
-						<hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
-						<versionTagPrefix></versionTagPrefix>
-					</gitFlowConfig>
-
-				</configuration>
-			</plugin>-->
         <plugin>
             <groupId>external.atlassian.jgitflow</groupId>
             <artifactId>jgitflow-maven-plugin</artifactId>
