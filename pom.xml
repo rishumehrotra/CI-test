@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.rishu</groupId>
 	<artifactId>sampleCI</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.1</version>
 	<name>sampleCI</name>
 
 	<dependencies>
@@ -28,23 +28,6 @@
 				<configuration>
 					<source>1.6	</source>
 					<target>1.6</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>com.amashchenko.maven.plugin</groupId>
-				<artifactId>gitflow-maven-plugin</artifactId>
-				<version>1.2.2</version>
-				<configuration>
-					<!-- optional configuration -->
-					<installProject>false</installProject>
-					<gitFlowConfig>
-						<productionBranch>master</productionBranch>
-						<developmentBranch>develop</developmentBranch>
-						<releaseBranchPrefix>release/</releaseBranchPrefix>
-						<hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
-						<versionTagPrefix></versionTagPrefix>
-					</gitFlowConfig>
-
 				</configuration>
 			</plugin>
 		</plugins>
