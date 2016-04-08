@@ -35,7 +35,6 @@
 				<artifactId>gitflow-maven-plugin</artifactId>
 				<version>1.2.2</version>
 				<configuration>
-					<!-- optional configuration -->
 					<installProject>false</installProject>
 					<gitFlowConfig>
 						<productionBranch>master</productionBranch>
