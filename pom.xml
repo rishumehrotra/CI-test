@@ -41,8 +41,6 @@
             <artifactId>jgitflow-maven-plugin</artifactId>
             <version>1.0-m5.1</version>
             <configuration>
-                <!-- see goals wiki page for configuration options -->
-  <configuration>
     <!-- Enable this to push to origin using SSH keys -->
     <enableSshAgent>true</enableSshAgent>
     <!-- Keep your maven submodules at the same version as the parent POM -->
