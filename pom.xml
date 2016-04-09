@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.rishu</groupId>
 	<artifactId>sampleCI</artifactId>
-	<version>0.0.10</version>
+	<version>0.0.11-SNAPSHOT</version>
 	<name>sampleCI</name>
 
 <scm>
