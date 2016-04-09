@@ -6,8 +6,8 @@
 	<name>sampleCI</name>
 
 <scm>
-<connection>scm:git:ssh://git@github.com:rishumehrotra/CI-test.git</connection>
-<url>scm:git:ssh://git@github.com:rishumehrotra/CI-test.git</url>
+<connection>scm:git:https://github.com/rishumehrotra/CI-test.git</connection>
+<url>scm:git:https://github.com:rishumehrotra/CI-test.git</url>
 <developerConnection>scm:git:https://github.com/rishumehrotra/CI-test.git</developerConnection>
 <tag>HEAD</tag>
 </scm>
