@@ -42,13 +42,14 @@
             <version>1.0-m5.1</version>
             <configuration>
                 <!-- see goals wiki page for configuration options -->
-		      <flowInitContext>
+                      <flowInitContext>
          <masterBranchName>master</masterBranchName>
          <developBranchName>develop</developBranchName>
          <releaseBranchPrefix>release/</releaseBranchPrefix>
        </flowInitContext>
             </configuration>
         </plugin>
+
 		</plugins>
 	</build>
 
