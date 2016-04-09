@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.rishu</groupId>
 	<artifactId>sampleCI</artifactId>
-	<version>0.0.7</version>
+	<version>0.0.8</version>
 	<name>sampleCI</name>
 
 <scm>
@@ -41,8 +41,6 @@
             <artifactId>jgitflow-maven-plugin</artifactId>
             <version>1.0-m5.1</version>
             <configuration>
-    <!-- Enable this to push to origin using SSH keys -->
-    <enableSshAgent>true</enableSshAgent>
     <!-- Keep your maven submodules at the same version as the parent POM -->
     <autoVersionSubmodules>true</autoVersionSubmodules>
     <!--
