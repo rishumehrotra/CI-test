@@ -74,6 +74,8 @@
          <developBranchName>develop</developBranchName>
          <releaseBranchPrefix>release/</releaseBranchPrefix>
        </flowInitContext>
+	<username>${git.user}</username>
+      <password>${git.pwd}</password>
             </configuration>
         </plugin>
 
