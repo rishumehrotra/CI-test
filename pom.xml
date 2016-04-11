@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.rishu</groupId>
 	<artifactId>sampleCI</artifactId>
@@ -7,16 +8,16 @@
 
 
 
-<properties>
-  <project.scm.id>zgit</project.scm.id>
-</properties>
+	<properties>
+		<project.scm.id>zgit</project.scm.id>
+	</properties>
 
-<scm>
-<connection>scm:git:ssh://git@github.com/rishumehrotra/CI-test.git</connection>
-<url>scm:git:ssh://git@github.com:rishumehrotra/CI-test.git</url>
-<developerConnection>scm:git:ssh://git@github.com/rishumehrotra/CI-test.git</developerConnection>
-<tag>HEAD</tag>
-</scm>
+	<scm>
+		<connection>scm:git:ssh://git@github.com/rishumehrotra/CI-test.git</connection>
+		<url>scm:git:ssh://git@github.com:rishumehrotra/CI-test.git</url>
+		<developerConnection>scm:git:ssh://git@github.com/rishumehrotra/CI-test.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 	<dependencies>
 		<dependency>
@@ -42,57 +43,48 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
-        <plugin>
-            <groupId>external.atlassian.jgitflow</groupId>
-            <artifactId>jgitflow-maven-plugin</artifactId>
-            <version>1.0-m5.1</version>
-            <configuration>
-    <!-- Keep your maven submodules at the same version as the parent POM -->
-    <autoVersionSubmodules>true</autoVersionSubmodules>
-    <!--
-      Pusing in-development features to origin allows all devs to see what each other
-      are working on
-    -->
-    <pushFeatures>true</pushFeatures>
-    <!--
-      This allows the CI server (e.g. Jenkins) to automatically push new releases to
-      origin; you can then either manually deploy them or, if you are doing Continuous
-      Deployments, auto-deploy them to prod
-    -->
-    <pushReleases>true</pushReleases>
-    <!--
-      Hot Fixes should be pushed to origin as well so that any dev can pick them up
-    -->
-    <pushHotfixes>true</pushHotfixes>
-    <!--
-      Prevents deployments from dev workstations so that they can be done by a CI
-      server
-    -->
-    <noDeploy>true</noDeploy>
-                      <flowInitContext>
-         <masterBranchName>master</masterBranchName>
-         <developBranchName>develop</developBranchName>
-         <releaseBranchPrefix>release/</releaseBranchPrefix>
-       </flowInitContext>
-	<username>${git.user}</username>
-      <password>${git.pwd}</password>
-            </configuration>
-        </plugin>
+			<plugin>
+				<groupId>external.atlassian.jgitflow</groupId>
+				<artifactId>jgitflow-maven-plugin</artifactId>
+				<version>1.0-m5.1</version>
+				<configuration>
+					<!-- Keep your maven submodules at the same version as the parent POM -->
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<!-- Pusing in-development features to origin allows all devs to see 
+						what each other are working on -->
+					<pushFeatures>true</pushFeatures>
+					<!-- This allows the CI server (e.g. Jenkins) to automatically push 
+						new releases to origin; you can then either manually deploy them or, if you 
+						are doing Continuous Deployments, auto-deploy them to prod -->
+					<pushReleases>true</pushReleases>
+					<!-- Hot Fixes should be pushed to origin as well so that any dev can 
+						pick them up -->
+					<pushHotfixes>true</pushHotfixes>
+					<!-- Prevents deployments from dev workstations so that they can be 
+						done by a CI server -->
+					<noDeploy>true</noDeploy>
+					<flowInitContext>
+						<masterBranchName>master</masterBranchName>
+						<developBranchName>develop</developBranchName>
+						<releaseBranchPrefix>release/</releaseBranchPrefix>
+					</flowInitContext>
+					<username>${git.user}</username>
+					<password>${git.pwd}</password>
+				</configuration>
+			</plugin>
 
 		</plugins>
 	</build>
 
-    <distributionManagement>
-        <repository>
-            <id>fakerepo</id>
-            <name>Local file system</name>
-            <url>file:///c:/svnFakeRepo/repo</url>
-        </repository>
-        <snapshotRepository>
-            <id>fakesnapshotrepo</id>
-            <name>Local file system</name>
-            <url>file:///c:/svnFakeRepo/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<url>http://nexus1.qa.zettata.net:8080/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<url>http://nexus1.qa.zettata.net:8080/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
