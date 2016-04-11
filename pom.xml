@@ -5,6 +5,12 @@
 	<version>0.0.12-SNAPSHOT</version>
 	<name>sampleCI</name>
 
+
+
+<properties>
+  <project.scm.id>zgit</project.scm.id>
+</properties>
+
 <scm>
 <connection>scm:git:ssh://git@github.com/rishumehrotra/CI-test.git</connection>
 <url>scm:git:ssh://git@github.com:rishumehrotra/CI-test.git</url>
