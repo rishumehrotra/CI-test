@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.rishu</groupId>
 	<artifactId>sampleCI</artifactId>
-	<version>0.0.17</version>
+	<version>0.0.18</version>
 	<name>sampleCI</name>
 
 
@@ -61,7 +61,7 @@
 					<pushHotfixes>true</pushHotfixes>
 					<!-- Prevents deployments from dev workstations so that they can be 
 						done by a CI server -->
-					<noDeploy>true</noDeploy>
+					<noDeploy>false</noDeploy>
 					<flowInitContext>
 						<masterBranchName>master</masterBranchName>
 						<developBranchName>develop</developBranchName>
