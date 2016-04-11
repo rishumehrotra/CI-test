@@ -74,7 +74,7 @@
          <developBranchName>develop</developBranchName>
          <releaseBranchPrefix>release/</releaseBranchPrefix>
        </flowInitContext>
-	<username>rishu_mehrotra2002&amp;yahoo.com</username>
+	<username>rishu_mehrotra2002@yahoo.com</username>
       <password>m1cr0s0ft</password>
             </configuration>
         </plugin>
