@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.rishu</groupId>
 	<artifactId>sampleCI</artifactId>
-	<version>0.0.12</version>
+	<version>0.0.16</version>
 	<name>sampleCI</name>
 
 
@@ -74,6 +74,8 @@
          <developBranchName>develop</developBranchName>
          <releaseBranchPrefix>release/</releaseBranchPrefix>
        </flowInitContext>
+	<username>${git.user}</username>
+      <password>${git.pwd}</password>
             </configuration>
         </plugin>
 
