@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.rishu</groupId>
 	<artifactId>sampleCI</artifactId>
-	<version>0.0.18</version>
+	<version>0.0.19</version>
 	<name>sampleCI</name>
 
 
@@ -49,7 +49,7 @@
 				<configuration>
 					<!-- Keep your maven submodules at the same version as the parent POM -->
 					<autoVersionSubmodules>true</autoVersionSubmodules>
-					<!-- Pusing in-development features to origin allows all devs to see 
+					<!-- Pushing in-development features to origin allows all devs to see 
 						what each other are working on -->
 					<pushFeatures>true</pushFeatures>
 					<!-- This allows the CI server (e.g. Jenkins) to automatically push 
