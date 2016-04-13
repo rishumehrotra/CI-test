@@ -5,6 +5,7 @@
 		<groupId>zettata</groupId>
 		<artifactId>zettata-parent-pom</artifactId>
 		<version>1.0.0</version>
+		<relativePath>../</relativePath>
 	</parent>
 	
 	<groupId>org.rishu</groupId>
