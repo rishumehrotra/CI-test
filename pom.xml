@@ -10,7 +10,7 @@
 	
 	<groupId>org.rishu</groupId>
 	<artifactId>sampleCI</artifactId>
-	<version>0.0.24-SNAPSHOT</version>
+	<version>0.0.24</version>
 	<name>sampleCI</name>
 
 
