@@ -40,6 +40,42 @@
 		</dependency>
 	</dependencies>
 
-
+<build>
+<plugins>
+      <plugin>
+        <artifactId>jdeb</artifactId>
+        <groupId>org.vafer</groupId>
+        <version>1.0.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>jdeb</goal>
+            </goals>
+            <configuration>
+              <deb>${project.build.directory}/${project.artifactId}-tomcat7_${project.version}.deb</deb>
+              <controlDir>src/deb/control</controlDir>
+              <dataSet>
+                <data>
+                  <src>${project.build.directory}/${project.build.finalName}.war</src>
+                  <type>file</type>
+                  <mapper>
+                    <type>perm</type>
+                    <prefix>/opt/zettata/share/java</prefix>
+                  </mapper>
+                </data>
+                <data>
+                  <type>link</type>
+                  <symlink>true</symlink>
+                  <linkTarget>/opt/zettata/share/java/${project.build.finalName}.war</linkTarget>
+                  <linkName>/var/lib/tomcat7/webapps/${project.artifactId}.war</linkName>
+                </data>
+              </dataSet>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+</plugins>
+</build>
 
 </project>

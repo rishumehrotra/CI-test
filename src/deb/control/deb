@@ -1,0 +1,9 @@
+Package: [[artifactId]]
+Version: [[version]]
+Section: misc
+Priority: optional
+Architecture: all
+Depends: libmysql-connector-java-tomcat7
+Maintainer: Parvesh Garg <parvesh@zettata.com>
+Distribution: development
+Description: [[name]]
